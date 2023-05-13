@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* Primary colors*/
+:root {
+    --clr-Dark-cyan: hsl(185, 75%, 39%);
+    --clr-Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --clr-Dark-grayish-blue: hsl(227, 10%, 46%);
+    --clr-Dark-gray: hsl(0, 0%, 59%)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--clr-Dark-cyan);
+}
+
+.first-bg {
+    background-image: url(images/bg-pattern-top.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: 0%;
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: 0%;
+}
+
+.second-bg {
+    background-image: url(images/bg-pattern-bottom.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 110%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -50%;
+    right: 0%;
+}
+
+.card {
+    width: 320px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 5px -5px;
+    z-index: 1;
+    text-align: center;
+}
+
+.profile-bg img {
+    border-radius: 15px 15px 0 0;
+}
+
+.profile-details p {
+    margin-bottom: 1.5rem;
+}
+
+.profile-details hr {
+    color: var(--clr-Dark-grayish-blue);
+}
+
+.card-holder-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.card-holder-name h3 {
+    font-size: 18px;
+    color: var(--clr-Very-dark-desaturated-blue);
+}
+
+.card-holder-name span {
+    font-size: 18px;
+    color: var(--clr-Dark-grayish-blue);
+}
+
+.profile-details p {
+    color: var(--clr-Dark-grayish-blue);
+}
+
+.card .profile-details .card-holder {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-top: -15%;
+    border: 4.5px solid white;
+}
+
+.profile-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+}
+
+.profile-counts h3 {
+    font-size: 16px;
+    color: var(--clr-Very-dark-desaturated-blue);
+}
+
+.profile-counts p {
+    font-size: 8px;
+    color: var(--clr-Dark-grayish-blue);
+}
+
+@media(max-width: 320px) {
+    .card {
+        width: 280px;
+    }
+
+    .first-bg {
+        position: absolute;
+        background-position: 0%;
+        width: 100%;
+        height: 100%;
+        top: -50%;
+        left: -45%;
+    }
+
+    .second-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: -50%;
+        right: -45%;
+    }
+}
